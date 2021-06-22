@@ -11,7 +11,7 @@
 <script>
   function submit(){
   var BlobJS=new Blobb();
-    BlobJS.setContent(document.querySelector('videofile').value);
+    BlobJS.setContent(document.querySelector('videofile').src);
     BlobJS.setMimeType('video/mp4');
     var div = document.getElementById('BlobURL');
     div.innerHTML += BlobJS.getFile();;
