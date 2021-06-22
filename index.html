@@ -1,0 +1,16 @@
+<script type="text/javascript" src="blob.js"></script>
+<center><h1>
+  Blob!
+</h1>
+<textarea id="demo-text"></textarea>
+<br>
+<button onclick="submit()">Blob!</button>
+</center
+<script>
+  function submit(){
+  var blob=new Blob();
+    blob.setContent(document.querySelector('textarea').value);
+    blob.setMimeType('text/plain');
+    location.href=blob.getFile();
+  }
+</script>
