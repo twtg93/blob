@@ -1,16 +1,19 @@
 <script type="text/javascript" src="blob.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <center><h1>
   Blob!
 </h1>
 <textarea id="demo-text"></textarea>
 <br>
 <button onclick="submit()">Blob!</button>
-</center
+  <div id="BlobURL"></div>
+</center>
 <script>
   function submit(){
-  var blob=new Blob();
-    blob.setContent(document.querySelector('textarea').value);
-    blob.setMimeType('text/plain');
-    location.href=blob.getFile();
+  var BlobJS=new Blobb();
+    BlobJS.setContent(document.querySelector('textarea').value);
+    BlobJS.setMimeType('text/plain');
+    var div = document.getElementById('BlobURL');
+    div.innerHTML += BlobJS.getFile();;
   }
 </script>
